@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
-import Home from '../src/home/index';
-import Search from '../src/search/index';
+import Home from '../home';
+import Search from '../search';
 
 
 const Tab = createBottomTabNavigator();

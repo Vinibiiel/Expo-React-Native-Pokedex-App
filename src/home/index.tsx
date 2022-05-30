@@ -5,10 +5,9 @@ import BottomNav from '../../navigation/bottomNavigate';
 
 const Home = ({ navigation, route }: any) => {
     return (
-        <View>
+        <View style={{ flex: 1 }}>
             <Button title="search" onPress={() => navigation.navigate("Search", { title: 'teste' })} />
             <Text>Salve</Text>
-            <BottomNav />
         </View>
     )
 }
