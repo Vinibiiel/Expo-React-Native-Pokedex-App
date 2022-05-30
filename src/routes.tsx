@@ -1,24 +1,15 @@
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import Search from './search';
-import Home from './home';
 import Bottom from './navigation/bottomNavigate'
 
-const Stack = createNativeStackNavigator();
+import { AuthProvider } from './auth';
 
-const AUTH = true;
-
-const Routes = () => (
+const Routes = (): JSX.Element => (
     <NavigationContainer>
-
-        {AUTH ? <Bottom /> : (
-            <Stack.Navigator initialRouteName='Home'>
-                <Stack.Screen name="Search" component={Search} />
-                <Stack.Screen name="Home" component={Home} />
-            </Stack.Navigator>
-        )}
+        <AuthProvider>
+            <Bottom />
+        </AuthProvider>
     </NavigationContainer>
 )
 
-export default Routes
+export default Routes;
