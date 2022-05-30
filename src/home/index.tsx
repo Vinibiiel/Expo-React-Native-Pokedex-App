@@ -1,7 +1,5 @@
 import React from 'react';
 import { Button, View, Text } from 'react-native';
-import BottomNav from '../../navigation/bottomNavigate';
-
 
 const Home = ({ navigation, route }: any) => {
     return (
